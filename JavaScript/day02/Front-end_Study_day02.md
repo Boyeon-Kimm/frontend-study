@@ -164,7 +164,7 @@ KIM BOYEON
     - 비동기 호출이 자주 일어나는 프로그램의 경우 콜백 지옥 발생
     - 콜백지옥이란 함수의 *매개변수로 넘겨지는 콜백 함수가 반복*되어 코드의 들여쓰기 수준이 감당하기 힘들어질 정도로 깊어지는 현상이다
 
-![Untitled](Front-end%20Study%20day02%20%E2%9C%A8%2097ea55070bc54f43b32eec9d9bc70126/Untitled.png)
+![Untitled](./day02_data/Untitled.png)
 
 ## 클로저(closure)
 
@@ -1192,7 +1192,7 @@ console.log(texts);
 hello bye
 ```
 
-![Untitled](Front-end%20Study%20day02%20%E2%9C%A8%2097ea55070bc54f43b32eec9d9bc70126/Untitled%201.png)
+![Untitled](./day02_data//Untitled%201.png)
 
 🏁 먼저 items.map 은 items 배열에서 한 개의 원소(객체)를 한개씩 차례로 불러온다. 불러온 객체를 map() 함수 내부 함수의 파라미터(item)로 받고 그 파라미터의 text를 추출해 texts라는 새로운 배열에 저장한다. 이 과정은 items의 모든 원소(객체)를 거칠 때까지 진행
 
