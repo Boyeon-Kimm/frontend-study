@@ -40,6 +40,10 @@ introduce("홍", "길동", say_bye);
 
 ✔️ 콜백 자체는 코드를 더 읽기 편하게 해주지만 너무 많은 콜백을 연결하면 오히려 나중에 디버깅 하기가 힘들어지기 때문에 적당하게 나누어서 사용하는 것이 좋다
 
+<br>
+<br>
+
+
 ### 콜백함수 사용 원칙
 
 - 익명의 함수 사용
@@ -97,6 +101,11 @@ callbackFunc(eat);
 
 // fruit: apple / vegetable: tomato
 ```
+
+
+<br>
+<br>
+
 
 ### 콜백함수 사용 시 주의할 점
 
@@ -206,6 +215,11 @@ alert(matrix.get_title());
 
 ✔️ 기본적으로 private한 속성을 지원하지 않는 자바스크립트에서, 클로저의 이러한 특성을 이용하여 private한 속성을 사용할 수 있게 된다.
 
+
+<br>
+<br>
+
+
 ## 일반 함수 `this` , 화살표 함수 `this` 차이점
 
 ### 일반 함수에서의 `this`
@@ -244,6 +258,12 @@ var obj = {
 obj.counter() // undefined
 ```
 
+
+<br>
+<br>
+
+
+
 ### 화살표 함수에서의 `this`
 
 - 화살표 함수는 일반 함수와는 반대로 함수를 선언할 때 `this` 에 바인딩할 객체가 정적으로 결정된다. 동적으로 결정되는 일반 함수와는 달리 화살표 함수의 `this` 는 언제나 상위 스코프의 `this` 를 가리킨다.
@@ -272,6 +292,12 @@ obj.counter() // 42
 
 - 위에서 setTimeout() 함수는 콜백을 인자값을 받아 호출할 경우 항상 window객체를 바인딩한다고 했는데, 이번에는 화살표 함수를통해 상위 컨텍스트인 자신을 소유한 obj를 바인딩하기 때문에 결과는 42가 출력된다.
 
+
+<br>
+<br>
+<br>
+
+
 ## 고차 함수(Higher - Order Function)
 
 ### 고차함수란?
@@ -279,6 +305,12 @@ obj.counter() // 42
 - 함수를 파라미터로 전달받거나 연산의 결과로 반환해주는 메서드
 - 함수형 프로그래밍의 핵심, 자바스크립트를 함수형 프로그래밍에 알맞은 언어로 만들어주는 특성
     - 함수형 프로그래밍이란? 함수를 다른 함수의 파라미터로 넘길 수도 있고 반환 값으로 함수를 받을 수도 있는 프로그래밍 형태
+
+
+<br>
+<br>
+
+
 
 ### `.forEach()`
 
@@ -307,6 +339,11 @@ numberArr.forEach((item) => {
  
 console.log(total); // 15
 ```
+
+
+<br>
+<br>
+
 
 ### `.map()`
 
@@ -341,6 +378,11 @@ console.log(numberMapArr); // ['odd', 'even', 'odd', 'even', 'odd']
 - `map` 은 각 요소를 다른 값으로 맵핑한 새로운 배열이 반환되는 점에 차이가 있다
 
 ✔️ `forEach()` 는 for문을 대체하여 사용, `map()` 은 연산의 결과로 새로운 배열을 생성하고자 할 때 사용 
+
+
+<br>
+<br>
+
 
 ### `.find()`
 
@@ -379,6 +421,12 @@ console.log(numberArr.find(item => item === 3));  // 3
 console.log(numberArr.filter(item => item === 3));  // [3, 3]
 ```
 
+
+<br>
+<br>
+
+
+
 ### `.findIndex()`
 
 - 배열 메소드 `indexOf()` 의 콜백 함수 버전
@@ -411,6 +459,12 @@ console.log(objectArr.findIndex(item => {
 console.log(objectArr.findIndex(item => item.name === 'Kim')); // 1
 ```
 
+
+<br>
+<br>
+
+
+
 ### `.filter()`
 
 - 주어진 배열을 순회하면서 콜백 함수의 반환 값이 true에 해당하는 요소로만 구성된 새로운 배열을 생성하여 반환
@@ -439,6 +493,12 @@ const numberFilterArr = numberArr.filter((item) => {
 
 console.log(numberFilterArr); // [2, 4]
 ```
+
+
+<br>
+<br>
+
+
 
 ### `.reduce()`
 
@@ -492,6 +552,12 @@ Sum: 15
 - accumulator : initialValue가 지정한 값
 - currentValue : 배열의 첫번째 값
 
+
+<br>
+<br>
+
+
+
 ### `.sort()`
 
 - 배열 정렬
@@ -539,6 +605,10 @@ arr.sort(function(a, b)  {
 }); // [ 1, 2, 3, 4, 8, 10, 50, 70 ]
 ```
 
+
+<br>
+
+
 **🏁 숫자 정렬**
 
 ```jsx
@@ -553,6 +623,9 @@ arr.sort(function(a, b)  {
 }); // [10, 3, 2, 1] 내립차순
 ```
 
+<br>
+
+
 🏁 **문자 정렬**
 
 ```jsx
@@ -566,6 +639,10 @@ arr.sort(function(a, b) {
   if(a === b) return 0;
 });  // ['boy', 'banana', 'b'] 내림차순
 ```
+
+<br>
+
+
 
 🏁 **문자(대소문자 구없이) 정렬**
 
@@ -595,6 +672,10 @@ arr.sort(function(a, b) {
 }); // ['Boy', 'banana', 'b'] 내림차순
 ```
 
+
+<br>
+
+
 🏁 **객체 정렬**
 
 ```jsx
@@ -613,6 +694,10 @@ arr.sort(function(a, b) {
 {"name":"banana","price":3000}
 */
 ```
+
+<br>
+<br>
+
 
 ### `.some()`
 
@@ -658,6 +743,10 @@ console.log(result2); // 리턴 값 : true
 // 하나라도 부합한 조건에 맞으면 true, 모두 부합하지 않으면 false
 ```
 
+<br>
+<br>
+
+
 ### `.every()`
 
 - `some()` 의 반대 버전
@@ -700,6 +789,11 @@ console.log(result2); // 리턴 값 : false
 // 하나라도 부합한 조건에 맞지 안으면 false, 모두 부합하면 true
 ```
 
+<br>
+<br>
+<br>
+
+
 ## 객체(object)
 
 ### 객체란?
@@ -721,6 +815,10 @@ kitty.name   // 나비
 
 - 하지만 숫자, 문자열, 불리언과 같은 원시 타입은 값이 정해진 객체로 취급되어, 객체로서의 특징도 함께 가지게 됩니다.
 
+<br>
+<br>
+
+
 ### 객체의 프로퍼티 참조
 
 ```jsx
@@ -741,6 +839,10 @@ var person = {
 person.name    // 홍길동
 person["name"] // 홍길동
 ```
+
+<br>
+<br>
+
 
 ### 객체의 메소드 참조
 
@@ -765,6 +867,10 @@ person.fullId;  // function () { return this.birthday + this.pId; }
 💡 메소드를 참조할 때 메소드 이름 뒤에 괄호 `()` 를 붙이지 않으면, 메소드가 아닌 프로퍼티 그 자체를 참조하게 된다. 따라서 괄호를 사용하지 않고 프로퍼티 그 자체를 참조하게 되면 해당 메소드의 정의 그 자체가 반환된다.
 
 </aside>
+
+<br>
+<br>
+
 
 ### 자바의 클래스와 자바스크립트의 객체는 무엇이 다른가?
 
@@ -815,6 +921,10 @@ console.log(mike.age);
     - 객체 안에는 데이터가 있다.
     - 메모리에 올라간다.
 
+<br>
+<br>
+
+
 ### 자바스크립트는 객체지향 언어라고 할 수 있을까?
 
 ✔️ 자바스크립트는 멀티-패러다임 언어로 *명령형(imperative), 함수형(functional), 프로토타입 기반(prototype-based) 객체지향 언어*다. 비록 다른 객체지향 언어들과의 차이점에 대한 논쟁들이 있긴 하지만, 자바스크립트는 강력한 객체지향 프로그래밍 능력들을 지니고 있다. 간혹 클래스가 없어서 객체지향이 아니라고 생각하는 사람들도 있으나 프로토타입 기반의 객체지향 언어다.
@@ -825,6 +935,10 @@ console.log(mike.age);
     - 생성자 함수
 - 자바스크립트는 이미 생성된 인스턴스의 자료구조와 기능을 동적으로 변경할 수 있다는 특징이 있다. 객체 지향의 상속, 캡슐화(정보 은닉) 등의 개념은 프로토타입 체인과 클로저 등으로 구현할 수 있다.
 - 클래스 기반 언어에 익숙한 프로그래머들은 이러한 프로토타입 기반의 특성으로 인해 혼란을 느낀다. 자바스크립트에서는 함수 객체로 많은 것을 할 수 있는데 클래스, 생성자, 메소드도 모두 함수로 구현이 가능하다
+
+<br>
+<br>
+
 
 ### 반복문 `for in` `for of`
 
@@ -888,6 +1002,11 @@ console.log(mike.age);
     ✔️ for / of 문은 익스플로러에서 지원하지 않는다. 
     
 
+<br>
+<br>
+<br>
+
+
 ## 기본형 변수 vs 참조형 변수
 
 ### 기본형 변수
@@ -897,6 +1016,10 @@ console.log(mike.age);
     - 변수에 새로운 값을 대입하는 것은 값을 변경하는 것이 아닌 새로 덮어쓰는 행위
 
 ✔️ 기본형 데이터는 값을 그대로 할당하는 것. 메모리상에 고정된 크기로 저장되며 원시 데이터 값 자체를 보관하므로 불변적이다. 기본적으로는 같은 데이터는 하나의 메모리를 사용. (재사용)
+
+<br>
+<br>
+
 
 ### 참조형 변수
 
@@ -918,11 +1041,20 @@ console.log(mike.age);
 
 </aside>
 
+<br>
+<br>
+<br>
+
+
 ## 일급 객체(first-class object)
 
 ### 일급객체란?
 
 - 사용할 때 다른 요소들과 아무런 차별이 없다는 것을 뜻한다
+
+<br>
+<br>
+
 
 ### 일급 객체의 조건
 
@@ -936,6 +1068,10 @@ console.log(mike.age);
 그렇다고 이것이 뭐 좋고 나쁘고 이런 개념은 아니다. 다만 일급 객체의 특성은 특히 함수형 언어들에서 중요한 포인트가 된다.
 
 </aside>
+
+<br>
+<br>
+
 
 ### 자바의 메소드와 자바스크립트 함수의 일급 객체
 
@@ -1010,7 +1146,12 @@ console.log(mike.age);
     const hello2 = hello();
     hello2();
     ```
-    
+ 
+ 
+<br>
+<br>
+<br>
+
 
 ## 배열
 
@@ -1057,6 +1198,10 @@ console.log(Object.getOwnPropertyDescriptors([1, 2, 3]));
         - 해시 테이블로 구현된 객체이므로 인덱스로 요소에 접근하는 경우 일반적인 배열보다 성능적으로 느림
         - 특정 요소를 검색하거나 삽입 또는 삭제하는 경우에는 일반적인 배열보다 성능적으로 빠름
 
+<br>
+<br>
+
+
 ### `length` 프로퍼티와 희소배열
 
 - length 프로퍼티는 배열의 길이를 나타내는 0 이상의 정수 값
@@ -1097,6 +1242,10 @@ console.log(Object.getOwnPropertyDescriptors(arr));
 - 값이 없는 요소를 위해 메모리 공간을 확보하지 않음
     - 배열의 요소가 연속적으로 위치하고 일부가 비어있는 배열을 `희소배열`
 
+<br>
+<br>
+
+
 ### `Array.isArray()`
 
 - 배열인지 확인
@@ -1108,6 +1257,10 @@ const arr = [1, 2, 3];
 console.log(typeof arr);  // object
 console.log(Array.isArray(arr));  // true
 ```
+
+<br>
+<br>
+
 
 ### 내장 메소드
 
@@ -1122,6 +1275,10 @@ a.pop();
 console.log(a); // 출력: [1,2,3,4]
 ```
 
+<br>
+<br>
+
+
 ### `shift()`
 
 - 배열의 첫번째 요소 제거
@@ -1132,6 +1289,10 @@ const a = [1,2,3,4,5];
 a.shift(); 
 console.log(a); // 출력: [2,3,4,5]
 ```
+
+<br>
+<br>
+
 
 ### `push()`
 
@@ -1144,6 +1305,10 @@ a.push(11);
 console.log(a); // 출력: [1,2,3,4,5,11]
 ```
 
+<br>
+<br>
+
+
 ### `unshift()`
 
 - 배열의 첫번째 요소에 추가
@@ -1154,6 +1319,10 @@ const a = [1,2,3,4,5];
 a.unshift(10);
 console.log(a); // 출력: [10,1,2,3,4,5]
 ```
+
+<br>
+<br>
+
 
 ### `map()`
 
@@ -1196,6 +1365,10 @@ hello bye
 
 🏁 먼저 items.map 은 items 배열에서 한 개의 원소(객체)를 한개씩 차례로 불러온다. 불러온 객체를 map() 함수 내부 함수의 파라미터(item)로 받고 그 파라미터의 text를 추출해 texts라는 새로운 배열에 저장한다. 이 과정은 items의 모든 원소(객체)를 거칠 때까지 진행
 
+<br>
+<br>
+
+
 ### `forEach()`
 
 - forEach 함수는 for문과 마찬가지로 반복적인 기능을 수행할 때 사용
@@ -1233,6 +1406,10 @@ superHeros.forEach(hero => {
 });
 ```
 
+<br>
+<br>
+
+
 ### `splice()`
 
 - 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 기존 배열의 내용을 변경하고 삭제한 데이터들을 배열로 반환
@@ -1244,6 +1421,10 @@ const b = a.splice(0,2);
 console.log(b); // 출력: [1,2]
 console.log(a); // 출력: [3,4,5]
 ```
+
+<br>
+<br>
+
 
 ### `slice()`
 
@@ -1258,11 +1439,19 @@ console.log(arr6.slice(0, 2));
 1, 3
 ```
 
+<br>
+<br>
+
+
 **🏁 `splice` `slice` 차이점**
 
 - slice는 기존 배열을 변경하지 않지만, splice는 기존 배열이 변경
 - slice는 배열에서 원하는 데이터만 추출하는 게 목적이지만, splice는 해당 배열을 원하는 데이터를 추가, 수정, 삭제가 목적
 - slice는 두 번째 인자가 종료 인덱스이지만, splice는 두 번째 인자가 삭제 개수
+
+<br>
+<br>
+
 
 ### `concat`
 
@@ -1279,6 +1468,10 @@ console.log(arr7.concat(arr8));
 1, 3, 4, 11, 13
 ```
 
+<br>
+<br>
+
+
 ### `join`
 
 - 배열의 내용을 문자 하나로 합쳐준다. " " 공백을 join 인풋 값으로 넣으면서 배열의 값 사이에 공백이 들어간 것을 확인할 수 있다
@@ -1290,6 +1483,10 @@ console.log(arr10.join(" "));
 //출력
 프론트엔드 과제 많다 
 ```
+
+<br>
+<br>
+
 
 ### `includes()`
 
@@ -1314,6 +1511,10 @@ console.log(pets.includes('at'));
 // expected output: false
 ```
 
+<br>
+<br>
+
+
 ### `reverse()`
 
 - 배열의 원소 순서를 반대로 만든다 (기존 배열의 순서를 바꿈)
@@ -1326,12 +1527,21 @@ console.log(arr);      // [5, 4, 3, 2, 1]
 console.log(reverse);  // [5, 4, 3, 2, 1]
 ```
 
+<br>
+<br>
+<br>
+
+
 ## 배열과 객체의 구조분해 및 구조분해할당(destructuring assignment)
 
 ### 구조분해할당이란?
 
 - 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)
 - 간단하게 정리하면 배열 [], 혹은 객체 {} 안의 값을 편하게 꺼내 쓸 수 있는 문법
+
+<br>
+<br>
+
 
 ### 기본 문법 - 배열
 
@@ -1366,6 +1576,10 @@ console.log(z); // 5
 [a1, a2, ...rest_a, a3] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // error
 [a1, a2, ...rest_a] = {a1 : 10, a2: 20}; // error
 ```
+
+<br>
+<br>
+
 
 ### 기본 문법 - 객체
 
@@ -1437,6 +1651,10 @@ var { getCandy, status: { count } } = candyMachine;
 getCandy();
 console.log(count); // 여전히 4가 된다.
 ```
+
+<br>
+<br>
+
 
 ### 구조분해할당에서 주의할 점
 
