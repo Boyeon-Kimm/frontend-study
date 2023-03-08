@@ -10,7 +10,7 @@
 - 이 객체 모델은 문서 내의 모든 요소를 정의하고 각각의 요소에 접근하는 방법을 제공한다
 - 넓은 의미로 웹 브라우저가 HTML 페이지를 인식하는 방식을 의미, 좁은 의미로 본다면 document 객체와 관련된 객체의 집합을 의미
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled.png)
+![Untitled](./day03_data/Untitled.png)
 
 <br>
 
@@ -980,7 +980,7 @@ document.querySelector('#input').addEventListener('input', function(e) {
     - 예제로 본다면 7번이나 요청 함.
     - 한글같은 조합형 언어는 사진처럼 7번보다 더 많이 이벤트가 발생할 수도 있음
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%201.png)
+![Untitled](./day03_data/Untitled%201.png)
 
 - 이와 같은 낭비는 유료 API 를 사용했을 때 큰 문제 발생(비용적인 문제)
     - 만약 구글지도 API 같은 것을 사용할 때 위와 같이 쿼리를 10번 날리면 큰 손해를 입게 됨
@@ -1004,7 +1004,7 @@ document.querySelector('#input').addEventListener('input', function(e) {
 });
 ```
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%202.png)
+![Untitled](./day03_data/Untitled%202.png)
 
 <br>
 
@@ -1040,7 +1040,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 });
 ```
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%203.png)
+![Untitled](./day03_data/Untitled%203.png)
 
 ✔️ `underscore` 의 `*.debounce` 와* `.throttle` 을 쓴다고 함! 
 
@@ -1067,7 +1067,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 - 예를들어 아래 3개가 중첩된 박스 영역에서 가장 자신 엘리먼트인 p 박스를 클릭하면 onclick 이벤트 스크립트가 p 뿐만 아니라 그의 부모인 div와 form 엘리먼트도 발생
 - 이러한 현상을 이벤트 전파(Event Propagation)이라고 부르며, 전파 방향에 따라 버블링과 캡쳐링으로 구분
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%204.png)
+![Untitled](./day03_data/Untitled%204.png)
 
  
 
@@ -1080,7 +1080,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 - 자식 요소에서 발생한 이벤트가 바깥 부모 요소로 전파(기본값)
 - 이벤트가 제일 깊은 곳에 있는 요소에서 시작해 부모 요소를 거슬러 올라가며 발생하는 모양이 마치 물속 거품(bubble)과 닮았기 때문에 지어진 이름
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%205.png)
+![Untitled](./day03_data/Untitled%205.png)
 
 <br>
 
@@ -1092,7 +1092,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 - 자바스크립트 `addEventListener()`
  함수로 요소의 이벤트를 등록하면 기본적으로 버블링 전파 방식으로 이벤트가 흐르게 되어, 만일 자식 요소에 이벤트가 발생하면 부모 요소도 버블링 통해 이벤트가 전파되어 리스너가 호출
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%206.png)
+![Untitled](./day03_data/Untitled%206.png)
 
 ```jsx
 // 버블링 동작 (false 생략 해도됨)
@@ -1109,7 +1109,7 @@ element.addEventListener('click', (e) => { ... }, false);
 
 - 한 요소에 이벤트가 발생되면, 그 요소의 자손 요소의 이벤트도 같이 발생되는 이벤트 전파
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%207.png)
+![Untitled](./day03_data/Untitled%207.png)
 
 <br>
 
@@ -1120,7 +1120,7 @@ element.addEventListener('click', (e) => { ... }, false);
 - 브라우저의 이벤트 전파 방식은 버블링이 기본값이기 때문에 캡처링으로 설정하기 위해선 별도의 옵션을 함수에 주어야 한다. 자바스크립트 `addEventListener()`
  함수의 3번째 매개변수로 true 값을 주면 이 이벤트 타겟은 캡처링을 통해 이벤트를 전파받아 호출하게 된다.
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%208.png)
+![Untitled](./day03_data/Untitled%208.png)
 
 ```jsx
 // 캡처링 동작
@@ -1259,7 +1259,7 @@ var httpRequest = new XMLHttpRequest();
 
 🏁 **URI 와 URL 의 차이**
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%209.png)
+![Untitled](./day03_data/Untitled%209.png)
 
 `URL` (Uniform Resource Identifier) : 인터넷에 있는 자원을 나타내는 유일한 주소
 
@@ -1530,4 +1530,4 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     - REST란? Representational State Transfer : HTTP를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍터
 - 작동 방식
 
-![Untitled](Front-end%20Study%20day03%F0%9F%A4%B9%E2%80%8D%E2%99%82%EF%B8%8F%206f81d84c962f4e119fbd9bdab61e92f1/Untitled%2010.png)
+![Untitled](./day03_data/Untitled%2010.png)
