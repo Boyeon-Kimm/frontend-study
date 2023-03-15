@@ -11,7 +11,7 @@
 - 모듈은 대개 클래스 하나 혹은 특정한 목적을 가진 복수의 함수로 구성된 라이브러리 하나로 구성된다.
 - 모듈은 단지 파일 하나에 불과함. *스크립트 하나는 모듈 하나*이다.
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled.png)
+![Untitled](./Front-end_Study_day04_data/Untitled.png)
 
 <br>
 
@@ -250,7 +250,7 @@ super() 처럼 괄호를 쓰는 특별한 문법 중 하나이다
 
 ### FOIT & FOUT 란?
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%201.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%201.png)
 
 - 우리가 처음 사이트에 진입했을 때, 글자가 늦게 뜨거나 폰트가 나중에 적용되는 현상이 일어난다.
 - 이 두 현상은 각각 지칭하여 `FOIT` `FOUT` 라고 부른다.
@@ -266,7 +266,7 @@ super() 처럼 괄호를 쓰는 특별한 문법 중 하나이다
 - 이유를 알기 위해서는 브라우저 동작을 먼저 알아야 한다.
 - 아래 그림은 브라우저가 랜더링 할 때 정보를 요청하는 순서를 나타낸 것
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%202.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%202.png)
 
 ```
 🧐 **순서 및 설명**
@@ -379,7 +379,7 @@ c. 용량이 작은 웹 폰트 형식을 사용하자
     - 웹 폰트는 `TTF/OTF` , `WOFF` , `WOFF2`, `SVG` , `EOT` 형식있음
     - 이 중에서 `WOFF` 와 `WOFF2` 가 압축률이 좋은데 기본적으로는 가장 압축률이 좋은 `WOFF2` 를 사용, 지원하지 않는 브라우저에서는 `WOFF` 사용
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%203.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%203.png)
 
 d. 서브셋 폰트를 사용하여 최적화
 
@@ -388,7 +388,7 @@ d. 서브셋 폰트를 사용하여 최적화
 - 하지만 실제 서비스에서 사용하지 않는 조합도 많다.
 - 불필요한 조합을 제거하여 폰트의 용량을 줄이고 폰트 최적화를 할 수 있음
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%204.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%204.png)
 
 e. `unicode-range` 속성 사용
 
@@ -433,11 +433,11 @@ e. `unicode-range` 속성 사용
 
 - `async` 속성은 아래와 같이 `<head>` 에 `<script>` 를 `async` 속성과 함께 사용하게 된다
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%205.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%205.png)
 
 - `async` 속성은 파싱과 JS 불러오기를 병렬적으로 진행한다
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%206.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%206.png)
 
 - 병렬적으로 진행하기 때문에 기존 방법들보다는 다운로드 받는 시간이 절약되어 효율적이라고 볼 수 있음
 - 하지만 JS를 실행하는 단계에서는 파싱을 중지하게 되고 JS 실행이 끝나면 다시 파싱을 재시작하게 되기 때문에 HTML이 모두 실행되기 전에 JS가 실행된다
@@ -452,11 +452,11 @@ e. `unicode-range` 속성 사용
 
 - `defer` 속성은 `async` 속성과 마찬가지로 `<head>` 에 `<script>` 를 `defer` 속성과 함께 사용하게 된다.
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%207.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%207.png)
 
 - 병렬적으로 파싱과 JS 불러오기를 진행하게 되고 파싱이 모두 끝나면 JS 실행
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%208.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%208.png)
 
 - 병렬적으로 진행되기 때문에 다운로드 시간 절약되고 `async` 속성과는 다르게 파싱하는 중에 JS 파일을 모두 다운로드 받아놓고 파싱이 끝난 후 순서대로 JS파일을 실행하기 떄문에 원하는 방향대로 스크립트 실행 가능
 
@@ -622,7 +622,7 @@ e. `unicode-range` 속성 사용
 
 ### `<table>` 태그의 기본
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%209.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%209.png)
 
 - `<table>`: 표를 생성하는 가장 상위 태그
 - `<tr>`: 행을 나타내는 태그
@@ -669,7 +669,7 @@ e. `unicode-range` 속성 사용
 
 - 실행 결과
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2010.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2010.png)
 
 <br>
 
@@ -677,7 +677,7 @@ e. `unicode-range` 속성 사용
 
 ### `<table>` 태그 속성 정리
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2011.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2011.png)
 
 <br>
 
@@ -685,13 +685,13 @@ e. `unicode-range` 속성 사용
 
 ## `flex`
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2012.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2012.png)
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2013.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2013.png)
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2014.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2014.png)
 
-![Untitled](Front-end%20Study%20day04%20%F0%9F%8C%B7%209a15041d557540dc8e1af5b8db468a81/Untitled%2015.png)
+![Untitled](./Front-end_Study_day04_data/Untitled%2015.png)
 
 <br>
 
