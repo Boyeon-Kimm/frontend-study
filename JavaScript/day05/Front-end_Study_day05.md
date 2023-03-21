@@ -24,7 +24,7 @@
 6. 자바스크립트 해석기 : 자바스크립트 코드를 해석하고 실행
 7. 자료 저장소 : 자료를 저장하는 계층으로 쿠키나 로컬 스토리지 등의 자료가 저장되는 저장소이다. 이는 하드디스크에 저장되며 HTML 명세 등도 이 곳에 저장된다.
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled.png)
+![Untitled](./Front-end_Study_day05_data/Untitled.png)
 
 <br>
 
@@ -44,7 +44,7 @@
 - 렌더링 엔진의 역할은 사용자로부터 요청받은 내용을 브라우저 화면에 표시하는 일, HTML, XML, 이미지 등 표시 가능
 - 렌더링 엔진의 동작 과정
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%201.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%201.png)
 
 1. HTML 파싱 : 렌더링 엔진은 먼저 HTML 문서를 파싱하고 콘텐츠 트리 내부에서 태그를 DOM노드로 변환. 그 다음 외부 CSS파일에 포함된 스타일 요소도 파싱한다. 그 후 스타일 정보와 HTML 표시 규칙은 렌더 트리라고 부르는 또 다른 트리를 구축한다.
 2. 렌더 트리 구축 : 렌더 트리는 색상 또는 면적과 같이 시각적 속성이 있는 사각형을 포함하고 있는데 이를 정해진 순서대로 화면에 표시하는 역할을 한다. 
@@ -63,7 +63,7 @@
     - Webkit은 렌더 객체로 구성되어 있는 **렌더 트리(render tree)**를 사용하고 요소를 배치하는데 **배치(layout)**라는 용어 사용
     
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%202.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%202.png)
 
 <br>
 
@@ -73,7 +73,7 @@
     - 렌더 트리를 **형상 트리(frame tree)**라고 부르며 각 요소를 **형상(frame)**이라고 부른다
     - 요소를 배치하는데는 **리플로(reflow)**라는 용어 사용
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%203.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%203.png)
 
 ✔️ 두 렌더링 엔진이 용어를 약간 다르게 사용하고 있지만 동작 과정은 기본적으로 동일.
 
@@ -87,7 +87,7 @@
 - 브라우저가 코드를 이해할 수 있는 구조로 변환하는 과정을 의미하며 파싱 결과는 보통 문서 구조를 나타내는 노드 트리인데 이를 파싱 트리 또는 문법 트리라고 함
 - 파싱은 어휘 분석과 구문 분석으로 분류할 수 있다
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%204.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%204.png)
 
 - 문서 : 렌더링 엔진에 전송되는 HTML 문서
 - 어휘 분석 : 자료를 토큰으로 분해하는 과정. 토큰은 용어집이라고 할 수 있는데 쉽게 설명하자면 사전에 등장하는 모든 단어에 해당. 이 과정에서 공백과 줄 바꿈과 같은 의미없는 문자들을 제거
@@ -104,7 +104,7 @@
 - 응답된 HTML 문서는 순수한 텍스트이므로 이를 브라우저가 이해할 수 있는 자료구조로 변환하여 메모리에 저장해야 한다.
     - 따라서 HTML 문서를 파싱해서 브라우저가 이해할 수 있는 자료구조인 DOM(Document Object Model)을 생성하는 것
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%205.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%205.png)
 
 1. 서버는 브라우저가 요청한 HTML 파일을 읽어들여 메모리에 저장한 다음 메모리에 저장된 바이트(2진수)를 인터넷을 경유하여 응답한다
 2. 브라우저는 바이트(2진수) 형태의 HTML 문서를 받아서 meta 태그의 charset 어트리뷰트에 의해 지정된 인코딩 방식(예: UTF-8) 으로 문자열로 변환한다
@@ -133,7 +133,7 @@ body {font-size: 12px;}
 ul {list-style-type: none;}
 ```
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%206.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%206.png)
 
 <br>
 
@@ -144,7 +144,7 @@ ul {list-style-type: none;}
 - 렌더링 엔진은 서버로부터 응답된 HTML과 CSS를 파싱하여 각각 DOM과 CSSOM을 생성하고 렌더링을 위한 렌더 트리로 결합된다
 - 브라우저 화면에 렌더링 되지 않는 노드(예: meta 태그, script 태그)와 CSS에 의해 비표시(예: display:none;) 되는 노드들은 포함하지 않는다
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%207.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%207.png)
 
 <br>
 
@@ -155,7 +155,7 @@ ul {list-style-type: none;}
 - 브라우저의 뷰포트(Viewport: 브라우저에서 페이지가 그려지는 영역) 내에서 렌더 트리 노드들이 가지고 있는 스타일과 속성에 따라서 브라우저 화면에 어떻게 그릴지 정확한 위치와 크기를 계산한다.
 - `%` `vw` `vh` 와 같은 단위들이 뷰포트 크기에 맞게 픽셀 단위로 변환된다.
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%208.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%208.png)
 
 <br>
 
@@ -167,7 +167,7 @@ ul {list-style-type: none;}
 - 이 때 처리해야하는 스타일이 복잡할수록 소요되는 시간이 늘어나게 된다.
     - 단색의 경우는 빠르지만 그라데이션이나 그림자 효과 등은 소요 시간이 비교적 더 오래걸린다.
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%209.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%209.png)
 
 <br>
 
@@ -242,7 +242,7 @@ document.getElementById('elem').className = 'highlight';
 - JWT는 토큰 자체를 정보로 사용하는 self-contained 방식으로 정보를 안전하게 전달한다
 - 주로 회원 인증이나 정보 전달에 사용되는 JWT는 아래의 로직을 따라서 처리된다
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2010.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2010.png)
 
 - 애플리케이션이 실행될 때, JWT를 static 변수와 로컬 스토리지에 저장하게 된다.
     - static 변수에 저장되는 이유는 HTTP 통신을 할 때마다 JWT를 HTTP 헤더에 담아서 보내야 하는데, 이를 로컬스토리지에서 계속 불러오면 오버헤드가 발생하기 때문
@@ -259,7 +259,7 @@ document.getElementById('elem').className = 'highlight';
 - `JWT`는 `Header`, `Payload`, `Signature`의 3부분으로 이루어지며, `Json`형태인 각 부분은 `Base64`로 인코딩 되어 표현
 - `Base64` 는 암호화 된 문자열이 아니고, 같은 문자열에 대해 항상 같은 인코딩 문자열을 반환한다
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2011.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2011.png)
 
 <br>
 
@@ -300,7 +300,7 @@ document.getElementById('elem').className = 'highlight';
 - `Reousrce Server` : 구글, 페이스북, 카카오, 네이버 등 회사를 의미함. client와 Reource Owner가 사용하는 자원들을 관리하며 유효성을 체크함.
 - `Authorization Server` : 권한을 부여해주는 서버. 사용자 → ID, PW를 넘겨 Authorization Code를 발급 받을 수 있다. Client → Authorization Code를 넘겨 Token을 발급 받을 수 있다.
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2012.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2012.png)
 
 - 그림에는 Refresh Token이 없지만, Access Token을 발급 해 주면서 Refrsh Token 또한 같이 발급된다.
 - Access Token이 만료 될 시 Refresh Token을 사용하여 재로그인 없이 Access Token을 재발급 받는다
@@ -315,7 +315,7 @@ document.getElementById('elem').className = 'highlight';
     - 권한 부여 승인 요청 시 response_tpye=code, grant_type = authorization_code 로 지정하여 요청하는 방식으로 가장 기본이 되는 방식
     - Refrsh Token 사용 가능
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2013.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2013.png)
 
 1. request에 포함된 redirect_url로 Authorization Code를 전달
 2. Authorization Code는 Authorization Server를 통해 Access Token으로 교환
@@ -324,7 +324,7 @@ document.getElementById('elem').className = 'highlight';
 - Implicit Grant - 암묵적 승인 방식
     - 자격 증명을 안전하게 저장하기 힘든 클라이언트(ex : javascript)에게 최적화 된 방식으로 `response_type = token` 으로 요청
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2014.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2014.png)
 
 1. 권한 부여 승인 코드 없이 바로 Access Token이 발급 (노출 위험을 방지하기 위해 보통 만료기간을 짧게함.)
 2. Refresh Token 사용이 불가능함.
@@ -335,14 +335,14 @@ document.getElementById('elem').className = 'highlight';
     - 클라이언트가 자신의 서비스에서 제공하는 어플리케이션일 경우에만 사용하는 방식.
     - Refrsh Token 사용 가능
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2015.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2015.png)
 
 - Client Credentials Grant - 클라이언트 자격증명 승인 방식
     - 클라이언트의 자격증명만으로 Access Token을 획득하는 방식으로 `grant_type = client_credentials` 로 요청
     - 자격증명을 안전하게 보관할 수 있는 클라이언트에만 사용
     - Refresh Token은 사용 불가능
 
-![Untitled](Front-end%20Study%20day05%20%F0%9F%90%AC%2012788d87827044c6a01b2a7fb50a5ae9/Untitled%2016.png)
+![Untitled](./Front-end_Study_day05_data/Untitled%2016.png)
 
 <br>
 
