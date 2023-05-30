@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+    // const num = prompt("원의 반지름을 입력해주세요.");
+
+    // const radius = Number(num);
+    // const width = 3.14 * radius * radius;
+    // const circumference = 3.14 * 2 * radius;
+
+    // alert(`원의 반지름: ${radius} \n원의 넓이: ${width} \n원의 둘레: ${circumference}`);
+
+
+    // <!-- 환율 변환 -->
+    // const num = prompt('달러 단위의 금액을 입력해주세요');
+
+    // const dollar = Number(num);
+    // const won = dollar * 1328;
+
+    // alert(`${dollar} 달러는 ${won}원 입니다.`);
+
+
+    // <!-- 오전 오후 출력-->
+    // const date = new Date();
+    // const hour = date.getHours();
+
+    // if(hour < 12) alert("오전입니다.");
+    // else alert("오후입니다.");
+
+
+    // <!--숫자 비교-->
+    // const a = Number(prompt('첫 번째 숫자', ''));
+    // const b = Number(prompt('두 번째 숫자', ''));
+
+    // if(a > b) alert('첫 번째 입력한 숫자가 더 큽니다.')
+    // else if(a === b) alert('두 숫자가 같습니다')
+    // else alert('두 번째 입력한 숫자가 더 큽니다.');
+
+
+    // <!--양수 음수 출력-->
+    // const a = Number(prompt('숫자를 입력해주세요', ''));
+
+    // if(a > 0) alert('양수입니다.')
+    // else if(a === 0) alert('0 입니다.')
+    // else alert('음수입니다.');
+
+
+    // <!--홀수 짝수 출력-->
+    // const a = Number(prompt('숫자를 입력해주세요', ''));
+
+    // if(a % 2 === 0) alert('짝수입니다.')
+    // else alert('홀수입니다.');
+
+
+    // <!--현재가 몇 월인지 확인하고, 계절을 구분하는 프로그램-->
+    // const a = Number(prompt('월을 입력해주세요.', ''));
+
+    // if(a < 1 || a > 12) alert("해당 월이 없습니다. 확인 후 다시 입력해주세요.")
+    // else {
+    //   if(a <= 2 || a === 12) alert("겨울입니다.")
+    //   else if(a <= 5) alert("봄입니다.")
+    //   else if(a <= 8) alert("여름입니다.")
+    //   else alert("가을입니다.")
+    // }
+
+
+    // 조건부 연산자
+    // const input = prompt('숫자를 입력해주세요', '');
+    // const num = Number(input);
+
+    // const result = (num >= 0) ? '0 이상의 숫자입니다' : '0 보다 작은 숫자입니다';
+    // alert(result);
+  
+  
+    // 태어난 연도를 입력받아 띠 출력하기
+    // const input = prompt('태어난 해를 입력해주세요', '');
+    // const year = Number(input);
+    // const tti = '원숭이,닭,개,돼지,쥐,소,호랑이,토끼,용,뱀,말,양'.split(',');
+
+    // alert(`${year}년도에 태어났다면 ${tti[year % 12]}띠 입니다.`);
+
+
+    // const result = (100 > 200) ? prompt('값을 입력해주세요', '') : confirm('버튼을 클릭해주세요');
+    // alert(result);
+
+
+    // 태어난 년도를 입력받아 육십갑자 출력하는 프로그램
+    const input = prompt('태어난 해를 입력해주세요.', '');
+    const year = Number(input);
+
+    let gan = '경,신,임,계,갑,을,병,정,무,기'.split(',');
+    let ji = '신,유,술,해,자,축,인,묘,진,사,오,미'.split(',');
+    
+    alert(`${year}년은 ${gan[year % 10]}${ji[year % 12]} 년입니다.`);
+
+
+    
+</script>
+</head>
+<body>
+</body>
+</html>
