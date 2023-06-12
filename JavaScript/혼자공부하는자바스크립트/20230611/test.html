@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+  <script>
+    // 윤년인지 확인하는 함수
+    // function isLeapYear(year) {
+    //   return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+    // }
+
+    // console.log(`2020년은 윤년일까? === ${isLeapYear(2020)}`);
+    // console.log(`2010년은 윤년일까? === ${isLeapYear(2010)}`);
+    // console.log(`2000년은 윤년일까? === ${isLeapYear(2000)}`);
+    // console.log(`1900년은 윤년일까? === ${isLeapYear(1900)}`);
+  
+    
+    // A부터 B까지 더하는 함수 만들기
+    // function addAll(a, b) {
+    //   let output = 0;
+    //   for(let i = a; i <= b; i++){
+    //     output += i;
+    //   }
+    //   return output;
+    // }
+
+    // console.log(`1부터 5까지의 합 : ${addAll(1, 5)}`);
+    // console.log(`3부터 5까지의 합 : ${addAll(3, 5)}`);
+    // console.log(`1부터 100까지의 합 : ${addAll(1, 100)}`);
+  
+
+    // A부터 B까지 곱하는 함수
+    // function multipleAll(a, b) {
+    //   let output = 1;
+    //   for(let i = a; i <= b; i++) {
+    //     output *= i;
+    //   }
+    //   return output;
+    // }
+
+    // console.log(`1부터 10까지 곱한 수 : ${multipleAll(1, 10)}`);
+    // console.log(`1부터 3까지 곱한 수 : ${multipleAll(1, 3)}`);
+    // console.log(`1부터 100까지 곱한 수 : ${multipleAll(1, 100)}`);
+  
+  
+    // 최솟값을 구하는 함수
+    // function min(array) {
+    //   let output = array[0];
+    //   for(const item of array) {
+    //     if(output > item) {
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+
+    // const testArray = [52, 273, 32, 103, 275, 24, 57];
+    // console.log(`${testArray} 중에서`);
+    // console.log(`최솟값 = ${min(testArray)}`);
+
+
+    // 최댓값을 구하는 함수
+    // function max(array) {
+    //   let output = array[0];
+    //   for(const item of array) {
+    //     if(output < item) {
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+
+    // const testArray = [52, 273, 32, 103 , 275, 24, 57];
+    // console.log(`${testArray} 중에서`);
+    // console.log(`최댓값은 : ${max(testArray)}`);
+
+
+    // 나머지 매개변수를 사용한 배열 만들기
+    // function sample(...items) {
+    //   console.log(items);
+    // }
+    // sample(1, 2);
+    // sample(1, 2, 3);
+    // sample(1, 2, 3, 4);
+
+
+    // 나머지 매개변수를 사용한 min() 함수
+    // function min(...items) {
+    //   let output = items[0];
+    //   for(const item of items) {
+    //     if(output > item) [
+    //       output = item
+    //     ]
+    //   }
+    //   return output;
+    // }
+    // console.log(`min(52, 273, 32, 103 , 275, 24, 57) 중에서`);
+    // console.log(`= ${min(52, 273, 32, 103 , 275, 24, 57)}`);
+  
+  
+    // 나머지 매개변수와 일반 매개변수를 갖는 함수
+    // function sample(a, b, ...c) {
+    //   console.log(a, b, c)
+    // }
+
+    // sample(1, 2)
+    // sample(1, 2, 3)
+    // sample(1, 2, 3, 4)
+
+
+    // 매개변수의 자료형에 따라 다르게 작동하는 min() 함수
+    // function min(first, ...rests) {
+    //   let output;
+    //   let items;
+      
+    //   if(Array.isArray(first)) {
+    //     output = first[0];
+    //     items = first;
+    //   } else if (typeof(first) === 'number') {
+    //     output = first;
+    //     items = rests;
+    //   }
+
+    //   for(const item of items) {
+    //     if(output > item) {
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+
+    // console.log(`min(배열): ${min([52, 273, 32, 103, 275, 24, 57])}`);
+    // console.log(`min(숫자 ...): ${min(52, 273, 32, 103, 275, 24, 57)}`);
+    
+    
+    // 전개 연산자의 활용
+    // function sample(...items) {
+    //   console.log(items)
+    // }
+
+    // const array = [1, 2, 3, 4];
+
+    // console.log('# 전개 연산자를 사용하지 않은 경우');
+    // sample(array);
+    // console.log('# 전개 연산자를 사용한 경우');
+    // sample(...array);
+
+
+    // 매개변수로 시급과 시간을 입력받아 급여를 계산하는 함수
+    // function earnings(name, wage = 8500, hours = 40) {
+    //   console.log(`# ${name} 님의 급여 정보`);
+    //   console.log(`- 시급: ${wage}원`);
+    //   console.log(`- 근무 시간: ${hours}시간`);
+    //   console.log(`- 급여: ${wage * hours}원`);
+    //   console.log('');
+    // }
+    // // 최저 시급으로 최대한 일하는 경우
+    // earnings('보연');
+
+    // // 시급 1만원으로 최대한 일하는 경우
+    // earnings('루비', 10000);
+
+    // // 시급 1만원으로 52시간 일한 경우
+    // earnings('보미', 10000, 52);
+
+
+    // 기본 매개변수를 추가한 윤년 함수
+    // function isLeapYear(year = new Date().getFullYear()) {
+    //   console.log(`매개변수 year : ${year}`);
+    //   return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+    // }
+
+    // console.log(`올해는 윤년일까? === ${isLeapYear()}`);
+    // console.log(`올해는 윤년일까? === ${isLeapYear(2020)}`);
+
+
+    // arguments를 사용한 가변 매개변수 함수
+    // function sample() {
+    //   console.log(arguments);
+    //   for(let i = 0; i < arguments.length; i++){
+    //     console.log(`${i}번째 요소 : ${arguments[i]}`);
+    //   }
+    // }
+
+    // sample(1, 2);
+    // sample(1, 2, 3);
+    // sample(1, 2, 3, 4);
+
+
+    // A부터 B까지 범위를 지정했을 때 범위 안의 숫자를 모두 곱하는 함수를 만들어보세요.
+    // function multiplyAll(a, b) {
+    //   let output = 1;
+    //   for(let i = a; i <= b; i++){
+    //     output *= i;
+    //   }
+
+    //   return output;
+    // }
+
+    // console.log(multiplyAll(1, 2));
+    // console.log(multiplyAll(1, 3));
+
+
+    // 매개변수로 max([1, 2, 3, 4])와 같은 배열을 받는 max() 함수를 만들어보세요
+    // function max(array) {
+    //   let output = array[0];
+      
+    //   for(const item of array) {
+    //     if(output < item){
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+    // console.log(max([1, 2, 3, 4]));
+
+
+    //매개변수로 max(1, 2, 3, 4)와 같이 숫자를 받는 max() 함수를 만들어보세요.
+    // const max = function (...array) {
+    //   let output = array[0];
+    //   for(let item of array) {
+    //     if(output < item) {
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+
+    // console.log(max(1, 2, 3, 4));
+
+
+    // max([1, 2, 3, 4]) 형태와 max(1, 2, 3, 4) 형태를 모두 입력할 수 있는 max() 함수를 만들어보세요
+    // const max = function(first, ...rests) {
+    //   let output;
+    //   let items;
+
+    //   if(Array.isArray(first)) {
+    //     output = first[0];
+    //     items = first;
+    //   } else if(typeof(first) === 'number') {
+    //     output = first;
+    //     items = rests;
+    //   }
+
+    //   for(const item of items) {
+    //     if(output < item) {
+    //       output = item;
+    //     }
+    //   }
+    //   return output;
+    // }
+
+    // console.log(`max(배열): ${max([1, 2, 3, 4])}`);
+    // console.log(`max(숫자, ...): ${max(1, 2, 3, 4)}`);
+
+
+    // 선언적 함수 사용하기
+    // function callThreeTimes(callback) {
+    //   for(let i = 0; i < 3; i++) {
+    //     callback(i);
+    //   }
+    // }
+
+    // function print(i) {
+    //   console.log(`${i}번째 함수 호출`);
+    // }
+
+    // callThreeTimes(print);
+
+
+    // 익명 함수 사용하기
+    // function callThreeTimes(callback) {
+    //   for(let i = 0; i < 3; i++) {
+    //     callback(i);
+    //   }
+    // }
+
+    // callThreeTimes(function (i) {
+    //   console.log(`${i}번째 함수 호출`);
+    // })
+    
+
+    // 배열의 forEach() 메소드
+    // const numbers = [273, 52, 103, 32, 57];
+
+    // numbers.forEach(function(value, index, array) {
+    //   console.log(`${index}번째 요소: ${value}`);
+    // })
+
+
+    // 배열의 map() 메소드
+    // let numbers = [273, 52, 103, 32, 57];
+
+    // numbers = numbers.map(function(value, index, array) {
+    //   return value * value;
+    // })
+
+    // numbers.forEach(console.log);
+      
+
+    // 배열의 filter() 메소드
+    // const numbers = [0, 1, 2, 3, 4, 5];
+    // const evenNumbers = numbers.filter(function(value) {
+    //   return value % 2 === 0;
+    // })
+
+    // console.log(`원래 배열: ${numbers}`);
+    // console.log(`짝수만 추출: ${evenNumbers}`);
+
+
+    // 배열의 메소드와 화살표 함수
+    // let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // numbers
+    //   .filter((value) => value % 2 === 0)
+    //   .map((value) => value * value)
+    //   .forEach((value) => {
+    //     console.log(value)
+    //   })
+
+
+    // 타이머 걸기
+    // setTimeout(() => {
+    //   console.log('1초 후에 실행됩니다')
+    // }, 1 * 1000)
+
+    // let count = 0;
+    // setInterval(() => {
+    //   console.log(`1초마다 실행됩니다 ${count}번째`);
+    //   count++;
+    // }, 1 * 1000)
+
+
+    // 타이머 취소하기
+    // let id;
+    // let count = 0;
+    // id = setInterval(() => {
+    //   console.log(`1초마다 실행됩니다. ${count}번째`);
+    //   count++;
+    // }, 1 * 1000)
+
+    // setTimeout(() => {
+    //   console.log('타이머를 종료합니다.');
+    //   clearInterval(id);
+    // }, 5 * 1000)
+
+
+    // data = 10;
+    // console.log(data);
+
+    // 'use strict'
+    // data = 10;
+    // console.log(data);
+
+
+    // filter 함수 사용
+    // let numbers = [273, 25, 75, 52, 103, 32, 57, 24, 76];
+    // numbers = numbers
+    // .filter((value) => value % 2 !== 0)
+    // .filter((value) => value <= 100)
+    // .filter((value) => value % 5 === 0)
+
+    // console.log(numbers);
+
+
+    // forEach 메소드 사용
+    const array = ['사과', '배', '귤', '바나나'];
+    
+    console.log('# for in 반복문')
+    array.forEach((value, index) => {
+      console.log(index);
+    })
+
+    console.log('# for of 반복문')
+    array.forEach((value) => {
+      console.log(value);
+    }) 
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
