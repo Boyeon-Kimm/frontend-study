@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>DOMContentLoaded</title>
+  <script>
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   const h1 = (text) => `<h1>${text}</h1>`
+    //   document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생')
+    // })
+
+    // event.currentTarget
+    // const listener = (event) => {
+    //   const length = event.currentTarget.value.length
+    //   h1.textContent = `글자 수: ${length}`
+    // }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // const header = document.querySelector('h1')
+
+      // header.textContent = 'HEADERS'
+      // header.style.color = 'white'
+      // header.style.backgroundColor = 'black'
+      // header.style.padding = '10px'
+
+      // const a = document.querySelector('#a')
+      // const b = document.querySelector('#b')
+
+      // a.textContent = '<h1>textContext 속성</h1>'
+      // b.innerHTML = '<h1>innerHtml 속성</h1>'
+
+      // const rects = document.querySelectorAll('.rect')
+
+      // rects.forEach((rect, index) => {
+      //   const width = (index + 1) * 100
+      //   const src = `http://placekitten.com/${width}/250`
+      //   rect.setAttribute('src', src)
+      //   // rect.src = src
+      // })
+
+      // const divs = document.querySelectorAll('body > div')
+
+      // divs.forEach((div, index) => {
+      //   console.log(div, index)
+      //   const val = index * 10
+      //   div.style.height = '10px'
+      //   div.style.backgroundColor = `rgba(${val}, ${val}, ${val})`
+      // })
+
+
+      // 문서 객체 생성하고 추가하기
+      // const header = document.createElement('h1')
+
+
+      // header.textContent = '문서 객체 동적으로 생성하기'
+      // header.setAttribute('data-custom', '사용자 정의 속성')
+      // header.style.color = 'white'
+      // header.style.backgroundColor = 'black'
+
+      // document.body.appendChild(header)
+
+
+      // 문서 객체 이동하기
+        // const divA = document.querySelector('#first')
+        // const divB = document.querySelector('#second')
+        // const h1 = document.querySelector('h1')
+        // h1.textContent = '이동하는 h1 태그'
+
+        // const toFirst = () => {
+        //   divA.appendChild(h1)
+        //   setTimeout(toSecond, 1000)
+        // }
+
+        // const toSecond = () => {
+        //   divB.appendChild(h1)
+        //   setTimeout(toFirst, 1000)
+        // }
+
+        // toFirst()
+
+
+        // 문서 객체 제거하기
+        // setTimeout(() => {
+        //   const h1 = document.querySelector('h1')
+
+        //   h1.parentNode.removeChild(h1)
+        //   // document.body.removeChile(h1)
+        // }, 3000)
+
+
+        // 이벤트 연결하기
+        // let counter = 0;
+        // const h1 = document.querySelector('h1')
+
+        // h1.addEventListener('click', (event) => {
+        //   counter++
+        //   h1.textContent = `클릭 횟수: ${counter}`
+        // })
+
+
+        // 이벤트 연결 제거하기
+        // let counter = 0
+        // let isConnect = false
+
+        // const h1 = document.querySelector('h1')
+        // const p = document.querySelector('p')
+        // const connectButton = document.querySelector('#connect')
+        // const disconnectButton = document.querySelector('#disconnect')
+    
+        // const listener = (event) => {
+        //   h1.textContent = `클릭 횟수 : ${++counter}`
+        // }
+
+        // connectButton.addEventListener('click', () => {
+        //   if(isConnect === false) {
+        //     h1.addEventListener('click', listener)
+        //     p.textContent = '이벤트 연결 상태: 연결'
+        //     isConnect = true
+        //   }
+        // })
+
+        // disconnectButton.addEventListener('click', () => {
+        //   if(isConnect === true) {
+        //     h1.removeEventListener('click', listener)
+        //     p.textContent = '이벤트 연결 상태: 해제'
+        //     isConnect = false
+        //   }
+        // })
+
+
+        // 남은 글자 수 출력하기
+        // const textarea = document.querySelector('textarea')
+        // const h1 = document.querySelector('h1')
+
+        // textarea.addEventListener('keyup', (event) => {
+        //   const length = textarea.value.length
+        //   h1.textContent = `글자 수 : ${length}`
+        // })
+        
+
+        // 키보드 이벤트와 관련된 이벤트 속성
+        // const h1 = document.querySelector('h1')
+        // const print = (event) => {
+        //   let output = ''
+        //   output += `alt: ${event.altKey}<br>`
+        //   output += `ctrl: ${event.ctrlKey}<br>`
+        //   output += `shift: ${event.shiftKey}<br>`
+        //   output += `code: ${typeof(event.code) !== 'undefined' ? event.code : event.keyCode}<br>`
+        //   h1.innerHTML = output
+        // }
+    
+        // document.addEventListener('keydown', print)
+        // document.addEventListener('keyup', print)
+
+
+        // 키로 별 움직이기
+        // const star = document.querySelector('h1')
+        // star.style.position = 'absolute'
+
+        // let [x, y] = [0, 0]
+        // const block = 20
+        // const print = () => {
+        //   star.style.left = `${x * block}px`
+        //   star.style.top = `${y * block}px`
+        // }
+
+        // print()
+
+        // const [left, up, right, down] = [37, 38, 39, 40]
+        // document.body.addEventListener('keydown', (event) => {
+        //   switch(event.keyCode) {
+        //     case left:
+        //       x -= 1
+        //       break
+
+        //     case up:
+        //       y -= 1
+        //       break
+
+        //     case right:
+        //       x += 1
+        //       break
+
+        //     case down:
+        //       y += 1
+        //       break
+        //   }
+        //   print()
+        // })
+
+
+        // event.currentTarget
+        // const textarea = document.querySelector('textarea')
+        // const h1 = document.querySelector('h1')
+        // textarea.addEventListener('keyup', listener)
+
+
+        // 입력 양식을 기반으로 inch를 cm 단위로 변환하는 프로그램
+        // const input = document.querySelector('input')
+        // const button = document.querySelector('button')
+        // const p = document.querySelector('p')
+
+        // button.addEventListener('click', () => {
+        //   const inch = Number(input.value)
+        //   if(isNaN(inch)) {
+        //     p.textContent = `숫자를 입력해주세요`
+        //     return
+        //   }
+
+        //   const cm = inch * 2.54
+        //   p.textContent = `${cm} cm`
+        // })
+
+
+        // 이메일 형식 확인하기
+        // const input = document.querySelector('input')
+        // const p = document.querySelector('p')
+        // const isEmail = (value) => {
+        //   // 골뱅이를 가지고 있고 && 골뱅이 뒤에 점이 있다면
+        //   return (value.indexOf('@') > 1) && (value.split('@')[1].indexOf('.') > 1)
+        // }
+
+        // input.addEventListener('keyup', (event) => {
+        //   const value = event.currentTarget.value
+        //   if(isEmail(value)) {
+        //     p.style.color = 'green'
+        //     p.textContent = `이메일 형식입니다: ${value}`
+        //   } else {
+        //     p.style.color = 'red'
+        //     p.textContent = `이메일 형식이 아닙니다: ${value}`
+        //   }
+        // })
+
+
+        // 기본 select 태그
+        // const select = document.querySelector('select')
+        // const p = document.querySelector('p')
+
+        // select.addEventListener('change', (event) => {
+        //   const options = event.currentTarget.options
+        //   const index = event.currentTarget.options.selectedIndex
+
+        //   p.textContent = `선택: ${options[index].textContent}`
+        // })
+
+
+        // multiple select 태그
+        // const select = document.querySelector('select')
+        // const p = document.querySelector('p')
+
+        // select.addEventListener('change', (event) => {
+        //   const options = event.currentTarget.options
+        //   const list = []
+        //   for(const option of options) {
+        //     if(option.selected) {
+        //       list.push(option.textContent)
+        //     }
+        //   }
+        //   p.textContent = `선택: ${list.join(',')}`
+        // })
+
+
+        // cm 단위를 여러 단위로 변환하는 프로그램
+        // let 현재값
+        // let 변환상수 = 10
+
+        // const input = document.querySelector('input')
+        // const select = document.querySelector('select')
+        // const span = document.querySelector('span')
+
+        // const calculate = () => {
+        //   span.textContent = (현재값 * 변환상수).toFixed(2)
+        // }
+
+        // select.addEventListener('change', (event) => {
+        //   const options = event.currentTarget.options
+        //   const index = event.currentTarget.options.selectedIndex
+
+        //   변환상수 = Number(options[index].value)
+        //   calculate()
+        // })
+
+        // input.addEventListener('keyup', (event) => {
+        //   현재값 = Number(event.currentTarget.value)
+        //   calculate()
+        // })
+
+
+        // 체크 박스 활용하기
+        // let [timer, timerId] = [0, 0]
+        // const h1 = document.querySelector('h1')
+        // const checkbox = document.querySelector('input')
+
+        // checkbox.addEventListener('change', (event) => {
+        //   if(event.currentTarget.checked) {
+        //     timerId = setInterval(() => {
+        //       timer += 1
+        //       h1.textContent = `${timer}초`
+        //     }, 1000)
+        //   } else {
+        //     clearInterval(timerId)
+        //   }
+        // })
+
+
+        // 라디오 버튼 사용해보기
+        // const output = document.querySelector('#output')
+        // const radios = document.querySelectorAll('[name=pet]')
+        
+        // radios.forEach((radio) => {
+        //   radio.addEventListener('change', (event) => {
+        //     const current = event.currentTarget
+        //     if(current.checked) {
+        //       output.textContent = `좋아하는 애완동물은 ${current.value}이시군요!`
+        //     }
+        //   })
+        // })
+
+
+        // 이미지 마우스 오른쪽 버튼 클릭 막기
+        const imgs = document.querySelectorAll('img')
+
+        imgs.forEach((img) => {
+          img.addEventListener('contextmenu', (event) => {
+            event.preventDefault()
+          })
+        })
+      })
+  </script>
+  <!--<script>
+    // document.addEventListener('DOMContentLoaded', () => {
+
+    // })
+
+    const h1 = (text) => `<h1>${text}<h1>`
+  </script>
+  <script>
+    document.body.innerHTML += h1('1번째 script 태그')
+  </script>
+-->
+<style>
+  /* 클릭을 여러 번 했을 때 글자가 선택되는 것을 막기 위한 스타일*/
+  /* h1 {
+    user-select: none;
+  } */
+</style>
+</head>
+<body>
+  <!--<script>
+    document.body.innerHTML += h1('2번째 script 태그')
+    </script>
+  <h1>1번째 h1 태그</h1>
+  <script>
+    document.body.innerHTML += h1('3번째 script 태그')
+  </script>
+  <h1>2번째 h2 태그</h1>
+-->
+<!-- <h1></h1> -->
+<!-- <div id="a"></div> -->
+<!-- <div id="b"></div> -->
+
+  <!-- <img class="rect">
+  <img class="rect">
+  <img class="rect">
+  <img class="rect"> -->
+
+  <!-- <div></div><div></div><div></div><div></div><div></div>
+  <div></div><div></div><div></div><div></div><div></div>
+  <div></div><div></div><div></div><div></div><div></div>
+  <div></div><div></div><div></div><div></div><div></div>
+  <div></div><div></div><div></div><div></div><div></div> -->
+
+
+  <!-- 문서 객체 이동하기 -->
+  <!-- <div id="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <hr>
+  <div id="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div> -->
+  <!-- <hr>
+  <h1>제거 대상 문서 객체</h1>
+  <hr> -->
+
+  <!-- <h1>클릭 횟수: 0</h1> -->
+
+
+  <!--이벤트 연결 제거하기-->
+  <!-- <h1>클릭 횟수: 0</h1>
+  <button id="connect">이벤트 연결</button>
+  <button id="disconnect">이벤트 제거</button>
+  <p>이벤트 연결 상태 : 해제</p> -->
+
+
+  <!--남은 글자 수 출력하기-->
+  <!-- <h1></h1>
+  <textarea></textarea> -->
+
+  <!--키보드 이벤트와 관련된 이벤트 속성-->
+  <!-- <h1>⭐</h1> -->
+
+
+  <!--입력 양식을 기반으로 inch를 cm 단위로 변환하는 프로그램-->
+  <!-- <input type="text">inch <br>
+  <button>계산</button>
+  <p></p> -->
+
+
+  <!--이메일 형식 확인하기-->
+  <!-- <input type="text">
+  <p></p> -->
+
+
+  <!--기본 select 태그-->
+  <!-- <select multiple>
+    <option>떡볶이</option>
+    <option>순대</option>
+    <option>튀김</option>
+    <option>오뎅</option>
+  </select> -->
+  <!--초깃값 지정하기-->
+  <!-- <p></p> -->
+
+
+  <!--cm 단위를 여러 단위로 변환하는 프로그램-->
+  <!-- <input type="text"> cm =
+  <span></span>
+  <select>
+    <option value="10">mm</option>
+    <option value="0.01">m</option>
+    <option value="0.393701">inch</option>
+  </select> -->
+
+
+  <!--체크 박스 활용하기-->
+  <!-- <input type="checkbox">
+  <span>타이머 활성화</span>
+  <h1></h1> -->
+
+
+  <!--라디오 버튼 사용해보기-->
+  <!-- <h3># 좋아하는 애완동물을 선택해주세요</h3>
+  <input type="radio" name="pet" value="강아지">
+  <span>강아지</span>
+  <input type="radio" name="pet" value="고양이">
+  <span>고양이</span>
+  <input type="radio" name="pet" value="햄스터">
+  <span>햄스터</span>
+  <input type="radio" name="pet" value="기타">
+  <span>기타</span>
+  <hr>
+  <h3 id="output"></h3> -->
+
+
+  <!--이미지 마우스 오른쪽 버튼 클릭 막기-->
+  <img src="http://placekitten.com/300/300"
+</body>
+</html>
