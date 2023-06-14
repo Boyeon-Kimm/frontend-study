@@ -31,8 +31,27 @@
       }
     ]
 
-    const output = _.sortBy(books, (book) => book.price)
+    // const output = _.sortBy(books, (book) => book.price)
+    // console.log(JSON.stringify(output, null, 2))
+
+    const output = _.orderBy(books, (book) => book.name)
     console.log(JSON.stringify(output, null, 2))
+  
+  
+    // function printLang(code) {
+    //   return printLang._lang[code]
+    // }
+
+    // printLang._lang = {
+    //   ko: '한국어',
+    //   en: '영어',
+    //   fr: '프랑스어',
+    //   es: '스페인어',
+    //   ja: '일본어',
+    // }
+
+    // console.log('printLang("ko"):', printLang('ko'))
+    // console.log('printLang("fr"):', printLang('fr'))
   </script>
 </head>
 <body>
