@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    // 체크 때만 링크 활성화
+    document.addEventListener('DOMContentLoaded', () => {
+      // let status = false
+
+      // const checkbox = document.querySelector('input')
+      // checkbox.addEventListener('change', (event) => {
+      //   status = event.currentTarget.checked
+      // })
+
+      // const link = document.querySelector('a')
+      // link.addEventListener('click', (event) => {
+      //   if(!status) {
+      //     event.preventDefault()
+      //   }
+      // })
+
+
+      // 글자 수 출력하기
+      // const textarea = document.querySelector('textarea')
+      // const h1 = document.querySelector('h1')
+      // let timerId
+
+      // textarea.addEventListener('focus', (event) => {
+      //   timerId = setInterval(() => {
+      //     const length = textarea.value.length
+      //     h1.textContent = `글자 수 : ${length}`
+      //   }, 50)
+      // })
+
+      // textarea.addEventListener('blur', (event) => {
+      //   clearInterval(timerId)
+      // })
+
+
+      // localStorage 활용하기
+      // const p = document.querySelector('p')
+      // const button = document.querySelector('button')
+      // const input = document.querySelector('input')
+
+      // const savedValue = localStorage.getItem('input')
+      // // localStorage.input 도 가능하다
+      // if(savedValue) {
+      //   input.value = savedValue
+      //   p.textContent = `이전 실행 때의 마지막 값: ${savedValue}`
+      // }
+
+      // input.addEventListener('keyup', (event) => {
+      //   const value = event.currentTarget.value
+      //   localStorage.setItem('input', value)
+      //   // localStorage.input = value 도 가능하다
+      // })
+      
+      // button.addEventListener('click', (event) => {
+      //   localStorage.clear()
+      //   input.value = ''
+      // })
+
+
+      // 기본 예외 처리
+      // const h1 = document.querySelector('h1')
+      // if(h1) {
+      //   h1.textContent = '안녕하세요'
+      // } else {
+      //   console.log('h1 태그를 추출할 수 없습니다.')
+      // }
+
+
+      // 예외 처리 구문 내부에서 return 사용하기 (1)
+      // function test () {
+      //   try {
+      //     console.log('A 위치입니다.')
+      //     throw "예외 강제 발생"
+      //   } catch (exception) {
+      //     console.log('B 위치입니다.')
+      //     return
+      //   } finally {
+      //     console.log('C 위치입니다.')
+
+      //   }
+      // }
+
+      // test()
+
+    })
+
+    // 예외 정보 출력하기
+    // try {
+    //   const array = new Array(9999999999999)
+
+    // } catch (exception) {
+    //   console.log(exception)
+    //   console.log()
+    //   console.log(`예외 이름: ${exception.name}`)
+    //   console.log(`예외 메시지: ${exception.message}`)
+    // }
+
+
+    // 예외 강제로 발생시키고 잡기
+    // function divide(a, b) {
+    //   if(b === 0) {
+    //     throw '0으로는 나눌 수 없습니다'
+    //   }
+
+    //   return a / b
+    // }
+
+    // console.log(divide(10, 2))
+    // console.log(divide(10, 0))
+
+
+    // 예외를 강제로 발생시키기
+    // function test(object) {
+    //   console.log(object.a + object.b)
+    // }
+
+    // test({})
+
+
+    // 예외를 강제로 발생시켜서 사용 유도하기
+    // function test(object) {
+    //   if(object.a !== undefined && object.b !== undefined) {
+    //     console.log(object.a + object.b)
+    //   } else {
+    //     throw new Error('a 속성과 b 속성을 지정하지 않았습니다.')
+    //   }
+    // }
+
+    // test({})
+
+
+    // 다음 코드의 실행 결과를 예측해보세요
+    // try {
+    //   console.log('try 구문입니다')
+    //   const array = ['사과', '바나나', '복숭아']
+    //   array.forEach(() => {
+    //     throw '예외를 강제로 발생시킵니다.'
+    //   })
+    // } catch (e) {
+    //   console.log('catch 구문입니다')
+    // } finally {
+    //   console.log('finally 구문입니다')
+    // }
+
+
+    // 객체와 배열 조합하기
+    // const students = []
+    // students.push({ 이름: '구름', 국어: 87, 수학: 88, 영어: 98, 과학: 90 })
+    // students.push({ 이름: '별이', 국어: 92, 수학: 98, 영어: 96, 과학: 88 })
+    // students.push({ 이름: '겨울', 국어: 76, 수학: 88, 영어: 94, 과학: 86 })
+    // students.push({ 이름: '바다', 국어: 98, 수학: 52, 영어: 98, 과학: 92 })
+  
+    // console.log(JSON.stringify(students, null, 2))
+
+    // let output = '이름\t총점\t평균\n'
+    // for(const student of students) {
+    //   const sum = student.국어 + student.수학 + student.영어 + student.과학
+    //   const average = sum / 4
+    //   output += `${student.이름}\t${sum}점\t${average}점\n`
+    // }
+    // console.log(output)
+
+    // 객체를 처리하는 함수를 선언한다
+    // function getSumOf(student) {
+    //   return student.국어 + student.영어 + student.수학 + student.과학
+    // }
+
+    // function getAverageOf(student) {
+    //   return getSumOf(student) / 4
+    // }
+
+    // // 출력한다
+    // let output = '이름\t총점\t평균\n'
+    // for(const s of students) {
+    //   output += `${s.이름}\t${getSumOf(s)}점\t${getAverageOf(s)}점\n`
+    // }
+    // console.log(output)
+
+
+    // 객체를 처리하는 함수(2)
+    // for(const student of students) {
+    //   student.getSum = function() {
+    //     return this.영어 + this.국어 + this.수학 + this.과학
+    //   }
+
+    //   student.getAverage = function() {
+    //     return this.getSum() / 4
+    //   }
+    // }
+
+    // let output = '이름\t총점\t평균\n'
+    // for(const s of students) {
+    //   output += `${s.이름}\t${s.getSum()}점\t${s.getAverage()}점\n`
+    // }
+    // console.log(output)
+
+
+    // 객체를 생성하는 함수
+    // function createStudent(이름, 국어, 수학, 영어, 과학) {
+    //   return {
+    //     이름: 이름,
+    //     국어: 국어,
+    //     수학: 수학,
+    //     영어: 영어,
+    //     과학: 과학,
+
+    //     getSum() {
+    //       return this.국어 + this.수학 + this.영어 + this.과학
+    //     },
+
+    //     getAverage() {
+    //       return this.getSum() / 4
+    //     },
+
+    //     toString() {
+    //       return `${this.이름}\t${this.getSum()}점\t${this.getAverage()}점\n`
+    //     }
+    //   }
+    // }
+
+    // // 객체를 선언한다.
+    // const students = []
+    // students.push(createStudent('구름', 87, 98, 88, 90))
+    // students.push(createStudent('별이', 92, 98, 96, 88))
+    // students.push(createStudent('겨울', 76, 96, 94, 86))
+    // students.push(createStudent('바다', 98, 52, 98, 92))
+
+    // let output = `이름\t총점\t평균\n`
+    // for(const s of students) {
+    //   output += s.toString()
+    // }
+    // console.log(output)
+
+
+    // 클래스 선언하고 인스턴스 생성하기
+    // class Student {
+
+    // }
+
+    // // 학생 선언하기
+    // const student = new Student()
+
+    // // 학생 리스트 선언
+    // const students = [
+    //   new Student(),
+    //   new Student(),
+    //   new Student(),
+    //   new Student()
+
+    // ]
+
+
+    // 생성자 함수와 속성 추가하기
+    // class Student {
+    //   constructor (이름, 국어, 영어, 수학, 과학) {
+    //     this.이름 = 이름
+    //     this.국어 = 국어
+    //     this.영어 = 영어
+    //     this.수학 = 수학
+    //     this.과학 = 과학
+    //   }
+
+    //   getSum () {
+    //     return this.국어 + this.영어 + this.수학 + this.과학
+    //   }
+
+    //   getAverage() {
+    //     return this.getSum() / 4
+    //   }
+
+    //   toString() {
+    //     return `${this.이름}\t${this.getSum()}점\t${this.getAverage()}점\n`
+    //   }
+    // }
+
+
+    // const students = []
+    // students.push(new Student('구름', 87, 98, 88, 90))
+    // students.push(new Student('별이', 92, 98, 96, 88))
+    // students.push(new Student('겨울', 76, 96, 94, 86))
+    // students.push(new Student('바다', 98, 52, 98, 92))
+
+    // let output = `이름\t총점\t평균\n`
+    // for(const s of students) {
+    //   output += s.toString()
+    // }
+
+    // console.log(output)
+
+
+    // 삼각형 클래스
+    // class Rectangle {
+    //   constructor(width, height) {
+    //     this.width = width
+    //     this.height = height
+    //   }
+
+    //   getPerimeter() {
+    //     return 2 * (this.width + this.height)
+    //   }
+
+    //   getArea() {
+    //     return this.width * this.height
+    //   }
+    // }
+
+    // // 정사각형 클래스
+    // class Square {
+    //   constructor (length) {
+    //     this.length = length
+    //   }
+
+    //   getPerimeter() {
+    //     return this.length * 4
+    //   }
+
+    //   getArea() {
+    //     return this.length * this.length
+    //   }
+    // }
+
+    // const rectangle = new Rectangle(10, 20)
+    // console.log(`사각형의 둘레 : ${rectangle.getPerimeter()}`)
+    // console.log(`사각형의 넓이 : ${rectangle.getArea()}`)
+
+    // const square = new Square(10)
+    // console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+    // console.log(`정사각형의 넓이: ${square.getArea()}`)
+
+
+    // 사각형 클래스와 정사각형 클래스
+    // class Rectangle {
+    //   constructor(width, height) {
+    //     this.width = width
+    //     this.height = height
+    //   }
+
+    //   getPerimeter() {
+    //     return 2 * (this.width + this.height)
+    //   }
+
+    //   getArea() {
+    //     return this.width * this.height
+    //   }
+    // }
+
+    // class Square extends Rectangle {
+    //   constructor(length) {
+    //     super(length, length)
+    //   }
+    // }
+
+    // const square = new Square(10, 20)
+    // console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+    // console.log(`정사각형의 넓이: ${square.getArea()}`)
+
+
+    // 길이에 음수가 들어가지 않게 수정하기
+    // class Square {
+    //   constructor(length) {
+    //     if(length <= 0) {
+    //       throw '길이는 0보다 커야합니다.'
+    //     }
+    //     this.length = length
+    //   }
+
+    //   getPerimeter() { return this.length * 4 }
+    //   getArea() { return this.length * this.length }
+    // }
+
+    // const square = new Square(-10)
+    // console.log(`정사각형의 둘레: ${this.getPerimeter()}`)
+    // console.log(`정사각형의 넓이: ${this.getArea()}`)
+
+
+    // private 속성 사용하기 (1)
+    // class Square {
+    //   #length
+      
+    //   constructor(length) {
+    //     if(length <= 0) {
+    //       throw '길이는 0보다 커야합니다.'
+    //     }
+    //     this.#length = length
+    //   }
+
+    //   getPerimeter() { return this.#length * 4}
+    //   getArea() { return this.#length * this.#length}
+    // }
+
+    // // 클래스 사용하기
+    // const square = new Square(11)
+    // console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+    // console.log(`정사각형의 넓이: ${square.getArea()}`)
+
+
+    // 게터와 세터 메소드
+    // class Square {
+    //   #length
+
+    //   constructor(length) {
+    //     this.setLength(length)
+    //   }
+
+    //   setLength(value) {
+    //     if(value <= 0) {
+    //       throw '길이는 0보다 커야 합니다.'
+    //     }
+    //     this.#length = value
+    //   }
+
+    //   getLength(value) {
+    //     return this.#length
+    //   }
+
+    //   getPerimeter() { return 4 * this.#length }
+    //   getArea() { return this.#length * this.#length }
+    // }
+
+    // // 클래스 사용하기
+    // const square = new Square(12)
+    // console.log(`한 변의 길이는 ${square.getLength()}입니다`)
+
+    // square.setLength(-10)
+
+
+    // get 키워드와 set 키워드 조합하기
+    // class Square {
+    //   #length
+
+    //   constructor(length) {
+    //     this.length = length
+    //   }
+
+    //   get length () {
+    //     return this.#length
+    //   }
+
+    //   get perimeter () {
+    //     return 4 * this.#length
+    //   }
+
+    //   get area () {
+    //     return this.#length * this.#length
+    //   }
+
+    //   set length (length) {
+    //     if(length <= 0) {
+    //       throw '길이는 0보다 길어야 합니다.'
+    //     }
+    //     this.#length = length
+    //   }
+    // }
+
+    // const square = new Square(12)
+    // console.log(`한 변의 길이: ${square.length}`)
+    // console.log(`둘레: ${square.perimeter}`)
+    // console.log(`넓이: ${square.area}`)
+
+    // const squareB = new Square(-89)
+
+
+    // static 키워드 사용하기
+    // class Square {
+    //   #length
+    //   // static과 private 특성은 한꺼번에 적용 가능함
+    //   static #counter = 0
+    //   static get counter() {
+    //     return Square.#counter
+    //   }
+
+    //   constructor(length) {
+    //     this.#length = length
+    //     Square.#counter += 1
+    //   }
+
+    //   static perimeterOf (length) {
+    //     return length * 4
+    //   }
+
+    //   static areaOf (length) {
+    //     return length * length
+    //   }
+
+    //   get length () { return this.#length }
+    //   get perimeter () { return this.#length * 4 }
+    //   get area () { return this.#length * this.#length }
+
+    //   set length(length) {
+    //     if(length <= 0) {
+    //       throw '길이는 0보다 길어야 합니다.'
+    //     }
+    //     this.#length = length
+    //   }
+    // }
+
+    // // static 속성 사용하기
+    // const squareA = new Square(10)
+    // const squareB = new Square(20)
+    // const squareC = new Square(20)
+    // console.log(`지금까지 생성된 Square 인스턴스는 ${Square.counter}개 입니다.`)
+
+    // // static 메소드 사용학
+    // console.log(`한 변의 길이가 20인 정사각형의 둟레는: ${Square.perimeterOf(20)}입니다.`)
+    // console.log(`한 변의 길이가 30인 정사각형의 넓이는: ${Square.areaOf(30)}입니다.`)
+
+
+    // 메소드에서 순서대로 메소드 호출하기
+    // class LifeCycle {
+    //   call () {
+    //     this.a()
+    //     this.b()
+    //     this.c()
+    //   }
+
+    //   a() { console.log('a() 메소드를 호출합니다') }
+    //   b() { console.log('b() 메소드를 호출합니다') }
+    //   c() { console.log('c() 메소드를 호출합니다') }
+    // }
+
+    // class Child extends LifeCycle {
+    //   a() {
+    //     super.a()
+    //     console.log('자식의 a() 메소드입니다.')
+    //   }
+    // }
+
+    // // new LifeCycle().call()
+    // new Child().call()
+
+
+    // toString() 메소드 오버라이드 하기
+    class Pet {
+      constructor(name, age) {
+        this.name = name
+        this.age = age
+      }
+
+      toString() {
+        return `이름: ${this.name}\n나이: ${this.age}살`
+      }
+    }
+
+    const pet = new Pet('루비', 15)
+    // alert(pet)
+    console.log(pet + '')
+    console.log(pet.toString())
+</script>
+</head>
+<body>
+  
+  <!--체크 때만 활성화하기-->
+  <!-- <input type="checkbox">
+  <span>체크 활성화</span>
+  <br>
+  <a href="http://github.com/Boyeon-Kimm">Boyeon's Github</a> -->
+
+
+  <!--글자 수 출력하기-->
+  <!-- <h1></h1>
+  <textarea></textarea> -->
+
+
+  <!--localStorage 활용하기-->
+  <!-- <p></p>
+  <button>지우기</button>
+  <input type="text"> -->
+
+
+
+</body>
+</html>
