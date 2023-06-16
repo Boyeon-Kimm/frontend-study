@@ -31,11 +31,15 @@ chapter 02 . 모던 자바스크립트 기능 익히기
 - 논리 연산자의 원래 의미 && ||
 - 정리
 
+<br>
+
 chapter 03 . 자바스크립트에서 DOM 조작
 - 자바스크립트를 이용한 DOM 액세스
 - DOM 작성, 추가, 삭제
 - 자바스크립트를 이용해 DOM 조작하기
 - 정리
+
+<br>
 
 chapter 04 . 리액트 기본
 - 리액트 개발 시작하기
@@ -48,6 +52,8 @@ chapter 04 . 리액트 기본
 - export 종류
 - 정리
 
+<br>
+
 chapter 05 . 리액트와 CSS
 - Inline Styles
 - CSS Modules
@@ -57,6 +63,8 @@ chapter 05 . 리액트와 CSS
 - Tailwind CSS
 - 정리
 
+<br>
+
 chapter 06 . 재레더링 구조와 최적화
 - 재렌더링이 발생하는 조건
 - 렌더링 최적화 1(memo)
@@ -64,11 +72,15 @@ chapter 06 . 재레더링 구조와 최적화
 - 변수 메모이제이션(useMemo)
 - 정리
 
+<br>
+
 chapter 07 . 글로벌 State 관리
 - 글로벌 State 관리가 필요한 이유
 - Context에서 State 관리
 - 기타 글로벌 State 취급 방법
 - 정리
+
+<br>
 
 chapter 08 . 리액트와 타입스크립트
 - 타입스크립트 기본
@@ -80,6 +92,8 @@ chapter 08 . 리액트와 타입스크립트
 - 옵셔널 체이닝
 - 라이브러리 타입 정의
 - 정리
+
+<br>
 
 chapter 09 . 사용자 정의 훅
 - 사용자 정의 훅
