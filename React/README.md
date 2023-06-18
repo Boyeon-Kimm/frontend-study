@@ -42,15 +42,15 @@
 <br>
 
 **chapter 04 . 리액트 기본**
-- 리액트 개발 시작하기
-- JSX 표기법
-- 컴포넌트 사용 방법
-- 이벤트와 스타일
-- Props
-- State(useState)
-- 재렌더링과 부작용(useEffect)
-- export 종류
-- 정리
+- 리액트 개발 시작하기 ✅
+- JSX 표기법 ✅
+- 컴포넌트 사용 방법 ✅
+- 이벤트와 스타일 ✅
+- Props ✅
+- State(useState) ✅
+- 재렌더링과 부작용(useEffect) ✅
+- export 종류 ✅
+- 정리 ✅
 
 <br>
 
