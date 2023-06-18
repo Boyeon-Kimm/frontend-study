@@ -1,15 +1,19 @@
 import { ColoredMessage } from "./components/ColoredMessage";
 import { useState } from "react";
+import { useEffect } from "react";
 
 // const App = () => {
 export const App = () => {
+  // console.log("렌더링");
+
   // State 정의
   const [num, setNum] = useState(0);
 
   // 버튼 클릭 시 실행되는 함수 정의
   const onClickButton = () => {
     // alert();
-    setNum(num + 1);
+    // setNum(num + 1);
+    setNum((prev) => prev + 1);
   }
 
   // CSS 객체
@@ -23,6 +27,10 @@ export const App = () => {
   //   color: "pink",
   //   fontSize: "20px"
   // }
+
+  // useEffect(() => {
+  //   alert();
+  // }, [num]);
 
   return (
     <>
