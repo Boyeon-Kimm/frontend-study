@@ -55,8 +55,8 @@
 <br>
 
 **chapter 05 . 리액트와 CSS**
-- Inline Styles
-- CSS Modules
+- Inline Styles ✅
+- CSS Modules ✅
 - Styled JSX
 - styled components
 - Emotion
