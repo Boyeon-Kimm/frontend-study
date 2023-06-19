@@ -57,11 +57,11 @@
 **chapter 05 . 리액트와 CSS**
 - Inline Styles ✅
 - CSS Modules ✅
-- Styled JSX
-- styled components
-- Emotion
-- Tailwind CSS
-- 정리
+- Styled JSX ✅
+- styled components ✅
+- Emotion ✅
+- Tailwind CSS ✅
+- 정리 ✅
 
 <br>
 
