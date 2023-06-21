@@ -1,4 +1,11 @@
 import ReactDOM from "react-dom";
-import { App } from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import { App } from "./App";
+import { AdminFlagProvider } from "./components/providers/AdminFlagProvider";
+
+ReactDOM.render(
+  <AdminFlagProvider>
+    <App /> 
+  </AdminFlagProvider>, 
+  document.getElementById("root")
+);

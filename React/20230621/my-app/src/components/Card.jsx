@@ -12,14 +12,15 @@ const style = {
   alignItems: "center"
 };
 
-export const Card = props => {
+export const Card = () => {
   // props로 관리자 플래그를 받는다
-  const { isAdmin } = props;
+  // const { isAdmin } = props;
 
   return (
     <div style={style}>
       <p>김보연</p>
-      <EditButton isAdmin={isAdmin} />
+      <EditButton />
+      {/* <EditButton isAdmin={isAdmin} /> */}
     </div>
   )
 }
