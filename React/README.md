@@ -75,8 +75,8 @@
 <br>
 
 **chapter 07 . 글로벌 State 관리**
-- 글로벌 State 관리가 필요한 이유
-- Context에서 State 관리
+- 글로벌 State 관리가 필요한 이유 ✅
+- Context에서 State 관리 ✅
 - 기타 글로벌 State 취급 방법
 - 정리
 
