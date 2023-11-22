@@ -1,0 +1,19 @@
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  margin: 5rem;
+}
+
+.submitForm label {
+  background-color: rgb(198, 251, 237);
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 3rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: aquamarine;
+}
