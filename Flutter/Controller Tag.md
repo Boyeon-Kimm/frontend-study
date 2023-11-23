@@ -4,16 +4,16 @@ Created by: Boyeon Kim
 Created time: November 22, 2023 10:44 AM
 Tags: Frontend Study
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled.png)
+![Untitled](./assets/controllertag0.png)
 
 - get으로 Page랑 controller를 만들고, 여러 군데에서 재사용해야 할 때가 있음
     - Page(Widget)은 그냥 쓰면 되지만 GetxController의 instance가 독립적으로 생성되게 하기 위해서는 binding할 때 `tag 옵션`을 줘야한다
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled%201.png)
+![Untitled](./assets/controllertag1.png)
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled%202.png)
+![Untitled](./assets/controllertag2.png)
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled%203.png)
+![Untitled](./assets/controllertag3.png)
 
 ```dart
 return Navigator(
@@ -36,12 +36,12 @@ return Navigator(
 
 ## 🏷️ Controller Tag
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled%204.png)
+![Untitled](./assets/controllertag4.png)
 
 - `Get.lazyPut` 에서 입력받은 controllerTag와 함께 dependency 주입.
 - Page에서도 마찬가지로 입력받은 controller를 get tag에 override 해주기
 
-![Untitled](Controller%20Tag%209401da13e7874b82a9d7f4ead822feac/Untitled%205.png)
+![Untitled](./assets/controllertag5.png)
 
 - GetPage나 GetPageRoute 할 때 tag만 넣어주면 끝
 
