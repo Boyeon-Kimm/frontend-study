@@ -50,7 +50,7 @@ case PageTest.routeName:
   return GetPageRoute(
     page: () => PageTest(controllerTag: "홈"),
     binding: PageTestBinding(controllerTag: "홈"),
-  );
+  ); 
 ```
 
 - binding을 사용하지 못하는 경우나 page 밖에서 controller에 접근하는 경우 반드시 tag를 지정해줘야함. controller가 주입되지 않았다며 오류남
